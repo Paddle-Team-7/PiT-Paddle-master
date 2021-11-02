@@ -7,9 +7,8 @@ This is an unofficial Paddle implementation of [Rethinking Spatial Dimensions of
 ## Contents
 1. [Introduction](#introduction)
 2. [Reprod_Log](#reprod-log)
-3. [Dataset](#dataset)
-4. [Environment](#environment)
-5. [How to use model](#how-to-use-model)
+3. [Environment](#environment)
+4. [How to use model](#how-to-use-model)
 
 
 ## Introduction
@@ -43,30 +42,6 @@ Based on 'ReprodDiffHelper' model, the following five log files are produced.
 ├── loss_diff.log
 ├── bp_align_diff.log
 ```
-
-## Dataset
-The authors use [ImageNet1k](http://image-net.org/download), but any dataset will do. [COCO 2017](http://cocodataset.org/#download) has a small validation set (1 GB) which can be nicely split into train/valid for easier training. For instance, to obtain a 4200/800 train/valid split you can do:
-```
-cd data
-mkdir train valid test
-wget http://images.cocodataset.org/zips/val2017.zip
-unzip val2017.zip && cd val2017
-mv `ls | head -4200` ../train
-mv `ls | head -800` ../valid
-```
-
-You can also download the full datasets (7 GB) that more or less match the paper, if you have the bandwidth:
-
-```
-cd data
-mkdir train valid test
-wget http://images.cocodataset.org/zips/test2017.zip
-wget http://images.cocodataset.org/zips/val2017.zip
-unzip -j test2017.zip -d train
-unzip -j val2017.zip -d valid
-```
-
-Add your favorite images to the `data/test` folder. Only a handful will do to visually inspect the denoiser performance.
 
 
 ## Environment
