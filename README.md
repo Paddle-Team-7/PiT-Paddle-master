@@ -60,6 +60,6 @@ import paddle
 import pit
 
 model = pit.pit_ti(pretrained=False)
-model.load_state_dict(torch.load('./weights/pit_s_809.pth'))
+model.load_state_dict(torch.load('./weights/pit_s_809.pdparams'))
 print(model(torch.randn(1, 3, 224, 224)))
 
